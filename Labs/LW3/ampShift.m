@@ -14,7 +14,7 @@
 
 byte = input("Enter a binary byte: ");
 %Error check and if binary byte then do work 
-if all(byte >= 0) && all(byte < 2) 
+if all(byte >= 0) && all(byte < 2) && length(byte)  == 8
     t = 1:.001:9;
     a = 5*sin(2*pi*4*t);
     s = a;
@@ -43,7 +43,7 @@ if all(byte >= 0) && all(byte < 2)
     ylabel(p1,"Voltage V [volts]");
     title(p1,"5 sin(2\pi*4*t)");
     
-    %Dgigtal data waveform
+    %Digtal data waveform
     plot(p2,t,byteVal);
     xlabel(p2,"Time t [s]");
     ylabel(p2,"Bit Values");
